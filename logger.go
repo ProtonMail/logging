@@ -19,8 +19,7 @@ var loggers = make(map[string]*Logger)
 
 func init() {
 	if len(loggers) <= 0 {
-		defaultLogger := GetLogger("default")
-		defaultLogger.ConfigUseDefault()
+		GetLogger("default")
 	}
 }
 
