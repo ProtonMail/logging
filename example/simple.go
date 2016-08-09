@@ -34,11 +34,15 @@ func main() {
 				"number":  100,
 			}).Error("The ice breaks!")
 
-			log.WithFields(logrus.Fields{
-				"omg":     true,
-				"details": goerror.Wrap(err, 4).ErrorStack(),
-				"number":  100,
-			}).Fatal("The ice breaks!")
+			// log.WithFields(logrus.Fields{
+			// 	"omg":     true,
+			// 	"details": goerror.Wrap(err, 4).ErrorStack(),
+			// 	"number":  100,
+			// }).Fatal("The ice breaks!")
+
+			//when goes here need get log and upload to server
+			//var report = log.GetReport()
+			//need add a function to call pm api or third party api upload report string
 		}
 	}()
 
